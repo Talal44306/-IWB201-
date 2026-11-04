@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>مكتب تأجير السيارات - السيارات والحجز</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- استدعاء مكتبة jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- استدعاء ملف الجافاسكريبت الخاص بالوظيفة -->
+    <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+
+    <!-- شريط التنقل الموحد -->
+    <div class="navbar">
+        <a href="home.html">الصفحة الرئيسية</a>
+        <a href="AboutUs.html">من نحن</a>
+        <a href="Cars.html" class="active">السيارات</a>
+    </div>
+
+    <div class="container">
+        <h1>قائمة السيارات المتوفرة للتأجير</h1>
+        <p>يرجى استعراض تفاصيل السيارات واختيار سيارة أو أكثر ثم الضغط على زر "متابعة" لإتمام طلب الحجز:</p>
+
+        <table class="data-table" id="cars-table">
+            <thead>
+                <tr>
+                    <th>الرمز</th>
+                    <th>الموديل</th>
+                    <th>سنة الصنع</th>
+                    <th>السعر اليومي</th>
+                    <th>إظهار التفاصيل</th>
+                    <th>اختيار</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- السيارة الأولى -->
+                <tr>
+                    <td>CR-001</td>
+                    <td>Toyota Corolla</td>
+                    <td>2023</td>
+                    <td>250000 ل.س</td>
+                    <td><input type="checkbox" class="toggle-details" data-target="#details-1" /></td>
+                    <td><input type="checkbox" class="select-car" data-code="CR-001" data-model="Toyota Corolla" data-price="250000" /></td>
+                </tr>
+                <tr id="details-1" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <div class="car-details-box">
+                            <img src="China erhält ein Corolla-Facelift  wir bald auch_.jpg" alt="Toyota Corolla" class="car-img" />
+                            <ul class="specs-list">
+                                <li><strong>نوع الوقود:</strong> بنزين</li>
+                                <li><strong>ناقل الحركة:</strong> أوتوماتيك</li>
+                                <li><strong>عدد المقاعد:</strong> 5 مقاعد</li>
+                                <li><strong>عداد الكيلومترات:</strong> 25,000 كم</li>
+                                <li><strong>اللون:</strong> أبيض لؤلؤي</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- السيارة الثانية -->
+                <tr>
+                    <td>CR-002</td>
+                    <td>Kia Sportage</td>
+                    <td>2022</td>
+                    <td>400000 ل.س</td>
+                    <td><input type="checkbox" class="toggle-details" data-target="#details-2" /></td>
+                    <td><input type="checkbox" class="select-car" data-code="CR-002" data-model="Kia Sportage" data-price="400000" /></td>
+                </tr>
+                <tr id="details-2" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <div class="car-details-box">
+                            <img src="Kia Sportage muda, mas só para quem paga mais.jpg" alt="Kia Sportage" class="car-img" />
+                            <ul class="specs-list">
+                                <li><strong>نوع الوقود:</strong> بنزين</li>
+                                <li><strong>ناقل الحركة:</strong> أوتوماتيك (تيبترونيك)</li>
+                                <li><strong>عدد المقاعد:</strong> 5 مقاعد</li>
+                                <li><strong>عداد الكيلومترات:</strong> 42,000 كم</li>
+                                <li><strong>اللون:</strong> أسود ملكي</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- السيارة الثالثة -->
+                <tr>
+                    <td>CR-003</td>
+                    <td>Hyundai Elantra</td>
+                    <td>2024</td>
+                    <td>300000 ل.س</td>
+                    <td><input type="checkbox" class="toggle-details" data-target="#details-3" /></td>
+                    <td><input type="checkbox" class="select-car" data-code="CR-003" data-model="Hyundai Elantra" data-price="300000" /></td>
+                </tr>
+                <tr id="details-3" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <div class="car-details-box">
+                            <img src="2022 Hyundai Elantra N Ceramic White FWD 4-Door Sedan.jpg" alt="Hyundai Elantra" class="car-img" />
+                            <ul class="specs-list">
+                                <li><strong>نوع الوقود:</strong> هجين (Hybrid)</li>
+                                <li><strong>ناقل الحركة:</strong> أوتوماتيك</li>
+                                <li><strong>عدد المقاعد:</strong> 5 مقاعد</li>
+                                <li><strong>عداد الكيلومترات:</strong> 12,000 كم</li>
+                                <li><strong>اللون:</strong> فضي معدني</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- السيارة الرابعة -->
+                <tr>
+                    <td>CR-004</td>
+                    <td>Chevrolet Spark</td>
+                    <td>2021</td>
+                    <td>180000 ل.س</td>
+                    <td><input type="checkbox" class="toggle-details" data-target="#details-4" /></td>
+                    <td><input type="checkbox" class="select-car" data-code="CR-004" data-model="Chevrolet Spark" data-price="180000" /></td>
+                </tr>
+                <tr id="details-4" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <div class="car-details-box">
+                            <img src="한국지엠, 쉐보레 스파크(Chevrolet Spark)와 스파크S에 산뜻한 외장 색상을 추가해 경차의 개성을 높이고 고객 선택의 폭을 더욱 확대.jpg" alt="Chevrolet Spark" class="car-img" />
+                            <ul class="specs-list">
+                                <li><strong>نوع الوقود:</strong> بنزين (اقتصادية)</li>
+                                <li><strong>ناقل الحركة:</strong> عادي</li>
+                                <li><strong>عدد المقاعد:</strong> 4 مقاعد</li>
+                                <li><strong>عداد الكيلومترات:</strong> 60,000 كم</li>
+                                <li><strong>اللون:</strong> أحمر</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- السيارة الخامسة -->
+                <tr>
+                    <td>CR-005</td>
+                    <td>Hyundai H1</td>
+                    <td>2022</td>
+                    <td>500000 ل.س</td>
+                    <td><input type="checkbox" class="toggle-details" data-target="#details-5" /></td>
+                    <td><input type="checkbox" class="select-car" data-code="CR-005" data-model="Hyundai H1" data-price="500000" /></td>
+                </tr>
+                <tr id="details-5" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <div class="car-details-box">
+                            <img src="Hyundai H-100 PDF Workshop and Repair manuals _ Carmanualshub_com.jpg" alt="Hyundai H1" class="car-img" />
+                            <ul class="specs-list">
+                                <li><strong>نوع الوقود:</strong> مازوت (ديزل)</li>
+                                <li><strong>ناقل الحركة:</strong> أوتوماتيك</li>
+                                <li><strong>عدد المقاعد:</strong> 9 مقاعد (عائلية)</li>
+                                <li><strong>عداد الكيلومترات:</strong> 55,000 كم</li>
+                                <li><strong>اللون:</strong> رمادي غامق</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- زر متابعة -->
+        <div class="action-bar">
+            <input type="button" id="btn-continue" class="btn-primary" value="متابعة" />
+        </div>
+
+        <!-- نموذج الحجز (مخفي افتراضياً ويظهر عند الضغط على متابعة) -->
+        <div id="booking-section" style="display: none;">
+            <form id="rental-form" action="#" method="post">
+                <fieldset>
+                    <legend>نموذج طلب تأجير سيارة</legend>
+
+                    <div class="form-group">
+                        <label for="full-name">الاسم الكامل (أحرف عربية فقط):</label>
+                        <input type="text" id="full-name" name="fullName" placeholder="مثال: محمد الأحمد" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="national-id">الرقم الوطني (إلزامي - 11 خانة تبدأ برمز المحافظة 01-14): <span class="required">*</span></label>
+                        <input type="text" id="national-id" name="nationalId" maxlength="11" placeholder="مثال: 01020034567" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="start-date">تاريخ بداية التأجير (إلزامي - yyyy-mm-dd): <span class="required">*</span></label>
+                        <input type="date" id="start-date" name="startDate" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end-date">تاريخ نهاية التأجير (إلزامي - yyyy-mm-dd): <span class="required">*</span></label>
+                        <input type="date" id="end-date" name="endDate" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">رقم الموبايل (شبكتي Syriatel أو MTN):</label>
+                        <input type="text" id="mobile" name="mobile" maxlength="10" placeholder="مثال: 0933123456" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" />
+                    </div>
+
+                    <div class="form-actions">
+                        <input type="submit" id="btn-submit" class="btn-submit" value="إرسال" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- نافذة/رسالة عرض النتيجة النهائية -->
+        <div id="result-box" class="result-modal" style="display: none;"></div>
+    </div>
+
+    <div class="footer">
+        <p>جميع الحقوق محفوظة &copy; 2026 - الجامعة الافتراضية السورية SVU</p>
+    </div>
+
+</body>
+</html>

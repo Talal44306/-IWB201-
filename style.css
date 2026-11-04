@@ -1,0 +1,270 @@
+/* ==========================================================================
+   1. التنسيق العام وتوحيد الخطوط والألوان (من مكان واحد لكامل الموقع)
+   ========================================================================== */
+body {
+    font-family: "Tahoma", "Segoe UI", Arial, sans-serif; /* نوع الخط الموحد */
+    font-size: 16px;                                      /* حجم الخط الموحد */
+    line-height: 1.6;
+    color: #2c3e50;                                       /* لون النص الأساسي */
+    background-color: #f4f6f9;                            /* لون خلفية الصفحات */
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+h1, h2, h3 {
+    color: #1a365d;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 24px;
+    border-bottom: 2px solid #3182ce;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #2b6cb0;
+    margin-top: 25px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #cbd5e0;
+    margin: 25px 0;
+}
+
+/* ==========================================================================
+   2. شريط التنقل العلوي (Navigation Bar)
+   ========================================================================== */
+.navbar {
+    background-color: #1a365d;
+    overflow: hidden;
+    text-align: center;
+    padding: 12px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 24px;
+    margin: 0 5px;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: #2b6cb0;
+}
+
+.navbar a.active {
+    background-color: #3182ce;
+}
+
+/* ==========================================================================
+   3. الحاوية الرئيسية (Main Container)
+   ========================================================================== */
+.container {
+    width: 85%;
+    max-width: 1050px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.host-link {
+    color: #2b6cb0;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   4. تنسيق الجداول (جداول الطلاب، الفروع، والسيارات)
+   ========================================================================== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #cbd5e0;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.data-table tbody tr:hover {
+    background-color: #ebf8ff;
+}
+
+/* تنسيق سطر وصندوق التفاصيل الإضافية للسيارة */
+.details-row td {
+    background-color: #edf2f7 !important;
+    text-align: right;
+    padding: 18px;
+}
+
+.car-details-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.car-img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid #cbd5e0;
+    background-color: #ffffff;
+}
+
+.specs-list {
+    list-style-type: square;
+    margin: 0;
+    padding-right: 20px;
+}
+
+.specs-list li {
+    margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   5. تنسيق عناصر الإدخال النصية من مكان واحد (شرط أساسي في الوظيفة)
+   ========================================================================== */
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    max-width: 450px;
+    padding: 10px 12px;
+    background-color: #f8fafc; /* لون خلفية موحد لحقول الإدخال */
+    color: #1a202c;            /* لون خط موحد داخل الحقول */
+    border: 1px solid #a0aec0; /* إطار موحد */
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    background-color: #ffffff;
+    border-color: #3182ce;
+    outline: none;
+    box-shadow: 0 0 5px rgba(49, 130, 206, 0.35);
+}
+
+/* ==========================================================================
+   6. تنسيق النموذج المتقدم (Fieldset, Legend, Labels) والأزرار
+   ========================================================================== */
+#booking-section {
+    margin-top: 30px;
+}
+
+fieldset {
+    border: 2px solid #3182ce;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #fcfdfe;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #3182ce;
+    padding: 6px 18px;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #2d3748;
+}
+
+.required {
+    color: #e53e3e;
+}
+
+.action-bar,
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-primary,
+.btn-submit {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit {
+    background-color: #2f855a; /* لون أخضر لزر الإرسال النهائي */
+}
+
+.btn-primary:hover {
+    background-color: #1a365d;
+}
+
+.btn-submit:hover {
+    background-color: #276749;
+}
+
+/* ==========================================================================
+   7. صندوق عرض النتيجة النهائية وتذييل الصفحة (Footer)
+   ========================================================================== */
+.result-modal {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f0fff4;
+    border: 2px solid #48bb78;
+    border-radius: 8px;
+    color: #22543d;
+}
+
+.footer {
+    text-align: center;
+    padding: 18px 0;
+    background-color: #1a365d;
+    color: #e2e8f0;
+    margin-top: 40px;
+    font-size: 14px;
+}
